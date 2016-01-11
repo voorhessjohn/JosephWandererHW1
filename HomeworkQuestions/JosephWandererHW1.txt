@@ -1,0 +1,60 @@
+Joseph Wanderer
+1/10/16
+
+Q1: Which of the following are operators, and which are values?
+
+*
+'hello'
+-88.8
+-
+/
++
+5
+
+A1: Operators: *, -, /, +. Values: 'hello', -88.8, 5.
+
+
+Q2: Which of the following is a variable, and which is a string?
+
+spam
+'spam'
+
+A2: 'spam' is a string. spam is a variable. Spam is "spiced ham".
+
+
+Q3: Name three data types.
+
+A3: Integer, String, Floating-Point Number.
+
+
+Q4: What is an expression made up of? What do all expressions do?
+
+A4: Values and Operators. All expressions evaluate to a value.
+
+
+Q5: This chapter introduced assignment statements, like spam = 10. What is the difference between an expression and a statement?
+
+A5: An expression is any syntactically legal combination of symbols that returns a value.
+ A statement is an instruction that directs the computer to perform a specified action eg. assign a value to a variable.
+Expressions can also be statements and a statement may contain many expressions and other statements.
+
+
+Q6: What does the variable bacon contain after the following code runs?
+
+bacon = 20
+bacon + 1
+
+A6: the integer 21.
+
+
+Q7: What should the following two expressions evaluate to?
+
+'spam' + 'spamspam'
+'spam' * 3
+
+A7: The string 'spamspamspam'.
+
+
+Q8: Why is eggs a valid variable name while 100 is invalid?
+
+A8: 100 is invalid as a variable name because it begins with a number whereas eggs does not.
