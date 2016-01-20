@@ -1,6 +1,7 @@
 Q1: What are the two values of the Boolean data type? How do you write them?
 
 A1: True and False with a capital T and F, the rest lowercase and without quote marks.
+
 Q2: What are the three Boolean operators?
 
 A2: "and", "or" and "not".
