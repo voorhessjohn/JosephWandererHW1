@@ -1,0 +1,110 @@
+Q1: What are the two values of the Boolean data type? How do you write them?
+
+A1: True and False with a capital T and F, the rest lowercase and without quote marks.
+Q2: What are the three Boolean operators?
+
+A2: "and", "or" and "not".
+
+Q3: Write out the truth tables of each Boolean operator.
+
+A3: 	"And"
+	True and True = True
+	True and False = False
+	False and False = False
+
+	"Or"
+	True or True = True
+	True or False = True
+	False or False = False
+
+	"not"
+	not True = False
+	not False = Ture
+
+Q4: What do the following expressions evaluate to?
+
+(5 > 4) and (3 == 5)
+not (5 > 4)
+(5 > 4) or (3 == 5)
+not ((5 > 4) or (3 == 5))
+(True and True) and (True == False)
+(not False) or (not True)
+
+A4:
+	False
+	False
+	True
+	False
+	False
+	True
+
+Q5: What are the six comparison operators?
+
+A5: ==, !=, <, >, <=, >=
+
+Q6: What is the difference between the equal to operator and the assignment operator?
+
+A6: The equal to operator "==" compares two values to see if they are the same.
+ The assignment operator "=" takes a value or expression and assigns it to a variable.
+
+Q7: Explain what a condition is a where you would use one.
+
+A7: A condition is an expression that determines subsequent actions depending on whether it evaluates to True or False.
+You would use them in while loops and if statements to refine flow control and allow programs to change behavior according to circumstances.
+
+Q8: Identify the three blocks in this code:
+
+spam = 0
+if spam == 10:
+    print('eggs')
+    if spam > 5:
+        print('bacon')
+    else:
+        print('ham')
+    print('spam')
+print('spam')
+
+A8: 
+	1: the block starting with print('eggs'), containing the other two blocks and ending with print('spam').
+	2: the block containing print('bacon').
+	3: the block containing print('ham').
+
+Q9: Write code that prints Hello if 1 is stored in spam, prints Howdy if 2 is stored in spam, and prints Greetings! if anything else is stored in spam.
+
+A9: 
+spam = input()
+if spam == 1:
+	print('Hello')
+elif spam == 2:
+	print('Howdy')
+else:
+	print('Greetings!')
+
+Q10: What can you press if your program is stuck in an infinite loop?
+
+A10: Ctrl-C
+
+Q11: What is the difference between break and continue?
+
+A11: The break statement makes the program execution immediately exit the while loop in which it is found.
+The continue statement returns the program execution to the top of the loop to immediately evaluate its condition again.
+
+Q12: What is the difference between range(10), range(0, 10), and range(0, 10, 1) in a for loop?
+
+A12: There is no functional difference between the three; the otherwise default arguments of the range function (start and step) are simply made explicit in the latter two.
+
+Q13: Write a short program that prints the numbers 1 to 10 usng a for loop. Then write an equivalent program the prints the numbers 1 to 10 using a while loop.
+
+A13:
+
+for i in range(10):
+	print(i + 1)
+
+count = 1
+while count <= 10:
+	print(count)
+	count = count + 1
+
+Q14: If you had a function named bacon() inside a module named spam, how would you call it after importing spam?
+
+A14: spam.bacon()
