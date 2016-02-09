@@ -21,7 +21,7 @@ Q:7. What is a shortcut for the following code?
 if 'color' not in spam:
     spam['color'] = 'black'
 
-A:7. spam.get('color', 'black')
+A:7. spam.setdefault('color', 'black')
 
-Q:8. What module and function can be used to ìpretty printî dictionary values?
+Q:8. What module and function can be used to ‚Äúpretty print‚Äù dictionary values?
 A:8. pprint is the module name. pprint.pprint() is the the function.
