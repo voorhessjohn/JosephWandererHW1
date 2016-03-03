@@ -1,0 +1,40 @@
+import re, pyperclip
+rhymeRegex = re.compile(r'AH0 V')
+
+s.find(t)	index of first instance of string t inside s (-1 if not found)
+s.rfind(t)	index of last instance of string t inside s (-1 if not found)
+s.index(t)	like s.find(t) except it raises ValueError if not found
+s.rindex(t)	like s.rfind(t) except it raises ValueError if not found
+s.join(text)	combine the words of the text into a string using s as the glue
+s.split(t)	split s into a list wherever a t is found (whitespace by default)
+s.splitlines()	split s into a list of strings, one per line
+s.lower()	a lowercased version of the string s
+s.upper()	an uppercased version of the string s
+s.title()	a titlecased version of the string s
+s.strip()	a copy of s without leading or trailing whitespace
+s.replace(t, u)	replace instances of t with u inside s
+
+# findall() will not return a Match object but a list of strings—as long as there are no groups in the regular expression.
+# Each string in the list is a piece of the searched text that matched the regular expression.
+#>>> phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d') # has no groups
+#>>> phoneNumRegex.findall('Cell: 415-555-9999 Work: 212-555-0000')
+#['415-555-9999', '212-555-0000']
+
+
+# If there are groups in the regular expression, then findall() will return a list of tuples.
+# Each tuple represents a found match, and its items are the matched strings for each group in the regex.
+#>>> phoneNumRegex = re.compile(r'(\d\d\d)-(\d\d\d)-(\d\d\d\d)') # has groups
+#>>> phoneNumRegex.findall('Cell: 415-555-9999 Work: 212-555-0000')
+#[('415', '555', '9999'), ('212', '555', '0000')]
+
+rhymeRegex.findall(r'ALLTHETEXT')
+
+# TODO: Generate regexs for each rhyme class. Code a function that will generate all possible vowel-consonant and consonant-vowel phoneme endings?
+
+# TODO?: Split each line(word entry) into a list of separate strings.
+
+# TODO?: Split each line(word entry) into dictionary with key-value pairs of Word : Pronunciation
+
+# TODO: Find matches in CMUdict file
+
+# TODO: Copy to a file with a data structure that groups together matches of each regex ie. by rhyme

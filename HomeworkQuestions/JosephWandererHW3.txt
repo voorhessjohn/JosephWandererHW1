@@ -1,0 +1,44 @@
+Q1: Why are functions advantageous to have in your programs?
+A1: Functions make programs easier to read, debug and update because it cuts down on code duplication and allows code to be organized and compartmentalized in a logical way. 
+
+Q2: When does the code in a function execute: when the function is defined or when the function is called?
+A2: When called.
+
+Q3: What statement creates a function?
+A3: the "def" statement followed by a function name with parentheses which may or may not contain parameters. Then a colon.
+	eg. def goodbye():
+
+Q4: What is the difference between a function and a function call?
+A4: A function call is an instance of code that tells the program to execute an already defined function.
+    A function is the code that will be executed when the program calls it.
+
+Q5: How many global scopes are there in a Python program? How many local scopes?
+A5: There is only ever one global scope in a Python program. There are as many local scopes as there are functions called in a program.
+    The global scope remains until the program as a whole terminates. Particular local scopes exist until the function call associated with it finishes executing.
+
+Q6: What happens to variables in a local scope when the function call returns?
+A6: The variables in a local scope are forgotten when the function call returns.
+
+Q7: What is a return value? Can a return value be part of an expression?
+A7: A return value is the value that a function call evaluates to. Yes.
+
+Q8: If a function does not have a return statement, what is the return value of a call to that function?
+A8: The return value is None.
+
+Q9: How can you force a variable in a function to refer to the global variable?
+A9: You must use the Global statement before the name of the intended global variable.
+
+Q10: What is the data type of None?
+A10: None is the unique data type that represents the absence of a value.
+
+Q11: What does the import areallyourpetsnamederic statement do?
+A11: It imports a module called "areallyourpetsnamederic" so that functions within that module can then be called.
+
+Q12: If you had a function named bacon() in a module named spam, how would you call it after importing spam?
+A12.: spam.bacon()
+
+Q13: How can you prevent a program from crashing when it gets an error?
+A13: By using the try and except statements.
+
+Q14: What goes in the try clause? What goes in the except clause?
+A14: The potentially error-causing code goes in the try clause. Code that you want to run in the event of that error goes in the subsequent except clause.
