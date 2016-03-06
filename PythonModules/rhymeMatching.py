@@ -1,7 +1,14 @@
 import re, pprint, itertools, ast, random
 
-testString = 'logic'
+firstString = input('Type the words that you want to be rhymed: ')
 
+splitList = firstString.split(' ')
+
+#print(splitList)
+
+#testString = input('Type a word')
+
+rhymesList = []
 
 def rhymeSwap(searchString):
 
@@ -21,33 +28,33 @@ def rhymeSwap(searchString):
     tempRegex2 = re.compile(stripPattern2)
     tempRegex1 = re.compile(stripPattern1)
     
-    wordPronDictFile = open('wordPronDictFile.txt', 'r')
+    wordPronDictFile = open('/Users/johnglennvoorhess/Documents/wordPronDictFile.txt', 'r')
     wordPronDict = wordPronDictFile.read()
     wordPronDict = ast.literal_eval(wordPronDict)
     wordPronDictFile.close()
 
-    pronWordDict4File = open('pronWordDict4File.txt', 'r')
+    pronWordDict4File = open('/Users/johnglennvoorhess/Documents/pronWordDict4File.txt', 'r')
     pronWordDict4 = pronWordDict4File.read()
     pronWordDict4 = ast.literal_eval(pronWordDict4)
     pronWordDict4File.close()
 
-    pronWordDict3File = open('pronWordDict3File.txt', 'r')
+    pronWordDict3File = open('/Users/johnglennvoorhess/Documents/pronWordDict3File.txt', 'r')
     pronWordDict3 = pronWordDict3File.read()
     pronWordDict3 = ast.literal_eval(pronWordDict3)
     pronWordDict3File.close()
 
-    pronWordDict2File = open('pronWordDict2File.txt', 'r')
+    pronWordDict2File = open('/Users/johnglennvoorhess/Documents/pronWordDict2File.txt', 'r')
     pronWordDict2 = pronWordDict2File.read()
     pronWordDict2 = ast.literal_eval(pronWordDict2)
     pronWordDict2File.close()
 
-    pronWordDict1File = open('pronWordDict4File.txt', 'r')
+    pronWordDict1File = open('/Users/johnglennvoorhess/Documents/pronWordDict4File.txt', 'r')
     pronWordDict1 = pronWordDict1File.read()
     pronWordDict1 = ast.literal_eval(pronWordDict1)
     pronWordDict1File.close()
 
     if searchStringUp in wordPronDict.keys():
-        print('In Dict')
+#        print('In Dict')
         searchPron = wordPronDict[searchStringUp]
 
         mo4StringUnstressed = ''
@@ -102,18 +109,28 @@ def rhymeSwap(searchString):
                 rhymeListBig.append(rhymeList1[i])
             randomRhyme = random.choice(rhymeList1)
             randomRhyme = prettyRegex.sub('', randomRhyme)
-            print(rhymeList1)
-            print(randomRhyme)
+#            print(rhymeList1)
+#            print(randomRhyme)
+            rhymesList.append(randomRhyme)
         else:
             print('huh')
 
         if len(rhymeListBig) > 1:
-            print(rhymeListBig)
+#            print(rhymeListBig)
             randomRhyme = random.choice(rhymeListBig)
             randomRhyme = prettyRegex.sub('', randomRhyme)
-            print(randomRhyme)
+#            print(randomRhyme)
+            rhymesList.append(randomRhyme)
 
 
-rhymeSwap(testString)
+for s in splitList:
+    rhyme = rhymeSwap(s) 
+     
+#print(rhymesList)
+rhymeStr = " ".join(rhymesList)
+
+print(rhymeStr)
+
+
 
     
