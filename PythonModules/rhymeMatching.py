@@ -13,7 +13,7 @@ wordsToSwapList = wordsToSwapString.split(' ')
 #testString = input('Type a word')
 
 rhymesList = []
-rhymesList2 = []
+
 
 
 def rhymeSwap(searchString):
@@ -117,7 +117,7 @@ def rhymeSwap(searchString):
 #            randomRhyme = prettyRegex.sub('', randomRhyme)
 #            print(rhymeList1)
 #            print(randomRhyme)
-            rhymesList2.append(randomRhyme)
+            rhymesList.append(randomRhyme)
         else:
             print('huh')
 
@@ -126,19 +126,19 @@ def rhymeSwap(searchString):
             randomRhyme = random.choice(rhymeListBig)
             randomRhyme = prettyRegex.sub('', randomRhyme)
 #            print(randomRhyme)
-            rhymesList2.append(randomRhyme)
+            rhymesList.append(randomRhyme)
 
 
 for s in splitList:
     if s in wordsToSwapList:
         rhyme = rhymeSwap(s)
         if rhyme != None:
-            rhymesList2.append(str(rhyme))
+            rhymesList.append(str(rhyme))
     else:
         if s != None:
-            rhymesList2.append(s)
+            rhymesList.append(s)
          
 #print(rhymesList2)
-rhymeStr = " ".join(rhymesList2)
+rhymeStr = " ".join(rhymesList)
 
 print(rhymeStr)
